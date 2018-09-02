@@ -37,15 +37,15 @@ function trianglePoints( origin={} ) {
 	return [
 		{
 			x: 100,
-			y: 0
+			y: 50
 		},
 		{
 			x: 150,
-			y: 100
+			y: 150
 		},
 		{
 			x: 50,
-			y: 100
+			y: 150
 		}
 	].map( ({ x: px, y: py }) => ( { x: px + x, y: py + y } ) )
 }
