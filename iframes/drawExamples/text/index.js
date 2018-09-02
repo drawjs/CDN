@@ -3,14 +3,20 @@ fetchDraw( () => {
 	const canvas = document.getElementById('myCanvas')
 	const draw = new window.Draw( canvas )
 	
-	draw.addElement( "circle", {
-		x: 150,
-		y: 150,
-		radius: 50,
+	const text = "Hello draw.js!"
+	draw.addElement( 'text', {
+		text,
+		x: 100,
+		y: 100,
+		fontSize: 30,
+		fillColor: 'deepSkyBlue',
 	} )
 
-	draw.render()	
+	draw.render()
 } )
+
+
+
 
 
 

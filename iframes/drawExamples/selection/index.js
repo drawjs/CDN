@@ -3,14 +3,25 @@ fetchDraw( () => {
 	const canvas = document.getElementById('myCanvas')
 	const draw = new window.Draw( canvas )
 	
-	draw.addElement( "circle", {
-		x: 150,
-		y: 150,
-		radius: 50,
+	draw.addElement( "rect", {
+		left: 100,
+		top: 100,
+		width: 100,
+		height: 80,
 	} )
 
-	draw.render()	
+	draw.addElement( "rect", {
+		left: 260,
+		top: 100,
+		width: 100,
+		height: 80,
+	} )
+
+	draw.render()
 } )
+
+
+
 
 
 
