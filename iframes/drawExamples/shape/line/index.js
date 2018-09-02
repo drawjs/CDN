@@ -1,4 +1,3 @@
-
 fetchDraw(() => {
 	// Start here
 	const canvas = document.getElementById('myCanvas')
