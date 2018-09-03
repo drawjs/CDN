@@ -11,36 +11,38 @@ fetchDraw( () => {
 	} )
 
 	importBtn.addEventListener( 'change', function() {
-		onFileInputChange( function( text ) {
+		onFileInputChange( importBtn, function( text ) {
 			draw.importData( text )
 		} )
 	} )
 
 	draw.addElement( 'rect', {
-		top   : 100,
 		left  : 100,
+		top   : 80,
 		width : 100,
-		height: 100,
+		height: 120,
+	} )
+
+	draw.addElement( "polygon", {
+		points: trianglePoints( { x: 200, y: 30 } ),
+		curveUsesCanvasApi: true,
 	} )
 	
 
 	draw.render()
 } )
 
-function onFileInputChange( callback ) {
+function onFileInputChange( fileInput, callback ) {
 	try {
 			const reader = new FileReader()
 			function onReaderLoad( event ) {
+					fileInput.value = ''
 					callback( event.target.result )
 			}
 			reader.onload = onReaderLoad
 			reader.readAsText( event.target.files[ 0 ] )
 	} catch ( e ) {
 	}
-}
-
-function callback( text ) {
-draw.importData( text )
 }
 
 function trianglePoints( origin={} ) {
