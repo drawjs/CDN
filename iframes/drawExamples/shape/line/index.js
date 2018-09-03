@@ -12,7 +12,8 @@ fetchDraw(() => {
 		target: {
 			x: 230,
 			y: 15
-		}
+		},
+		showSegments: true
 	})
 
 	draw.addElement('polyline', {
@@ -37,7 +38,8 @@ fetchDraw(() => {
 				x: 230,
 				y: 50
 			},
-		]
+		],
+		showSegments: true
 	})
 	
 	draw.render()
