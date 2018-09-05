@@ -5,28 +5,28 @@ fetchDraw( () => {
 	
 	draw.addElement( "polygon", {
 		points: trianglePoints(),
-		curveRate: 0.0001
+		curveRate: 0.1
 	} )
 
 	draw.addElement( "polygon", {
 		points: trianglePoints( { x: 130 } ),
-		curveRate: 0.2
+		curveRate: 0.15
 	} )
 
 	draw.addElement( "polygon", {
 		points: trianglePoints( { x: 260 } ),
-		curveRate: 0.3
+		curveRate: 0.2
 	} )
 
 	draw.addElement( "polygon", {
 		points: trianglePoints( { x: 390 } ),
-		curveRate: 0.5
+		curveRate: 0.25
 	} )
 
 
 	draw.addElement( "polygon", {
 		points: trianglePoints( { x: 520 } ),
-		curveRate: 1
+		curveRate: 0.3
 	} )
 
 	draw.render()
